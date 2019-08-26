@@ -290,9 +290,11 @@ impl<T: Evented + Read + Write + Send + 'static> IoLoop<T> {
                         self.can_write,
                         self.has_data
                     );
+                    /*
                     self.set_readiness
                         .set_readiness(Ready::readable())
                         .map_err(Error::IOError)?;
+                    */
                 }
                 break;
             }
